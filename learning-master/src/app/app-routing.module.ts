@@ -1,7 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { CounterComponent } from './pages/counter/counter.component';
 import { LoginComponent } from './pages/login/login.component';
+import {PlannerComponent} from "./pages/planner/planner.component";
+import {CatFactsComponent} from "./pages/cat-facts/cat-facts.component";
+import {UsersComponent} from "./pages/users/users.component";
+import {UserComponent} from "./pages/users/user/user.component";
 
 const routes: Routes = [
   {
@@ -16,7 +21,24 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'planner',
+    component: PlannerComponent
+  },
+  {
+    path: 'cat-facts',
+    component: CatFactsComponent
+  },
+  {
+    path: 'users/:id',
+    component: UserComponent
+  },
+  {
+    path: 'users',
+    component: UsersComponent
   }
+
 ];
 
 @NgModule({

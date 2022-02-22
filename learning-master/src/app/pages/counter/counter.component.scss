@@ -1,8 +1,9 @@
 .counter-section {
-  background-color: #05445E;
+  background-color: #eaffd0;
   height: 100%;
   font-size: 40px;
   padding: 10px;
+
 }
 
 .counter-wrapper {
@@ -12,6 +13,7 @@
   align-items: center;
   justify-content: space-between;
   width: fit-content;
+
   min-width: 300px;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
@@ -41,6 +43,7 @@
 
 .btn:active {
   opacity: 0.7;
+  color: #FF0080;
 }
 
 .btn-add {

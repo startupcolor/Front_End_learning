@@ -1,0 +1,26 @@
+.user-section {
+  background-color: #05445E;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.user-table {
+  background-color: white;
+  border: 1px solid #05445E;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+  color: #05445E;
+}
+
+td, th {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.row:hover {
+  background-color: #EF6461;
+  color: white;
+  cursor: pointer;
+}

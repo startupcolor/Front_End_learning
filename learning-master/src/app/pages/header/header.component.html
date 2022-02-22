@@ -1,5 +1,10 @@
 <div class="header">
   <div class="link-wrapper">
-    <a *ngFor="let item of menuItems" class="link" [routerLink]="item.path" routerLinkActive="active">{{ item.title }}</a>
+    <a
+      *ngFor="let item of menuItems"
+      class="link" [routerLink]="item.path"
+      routerLinkActive="active">
+      {{ item.title }}
+    </a>
   </div>
 </div>

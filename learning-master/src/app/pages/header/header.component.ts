@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MenuItem } from '../../shared/models/menu-item.codel';
+import { MenuItem } from '../../shared/models/menu-item.model';
 
 @Component({
   selector: 'app-header',
@@ -15,6 +15,18 @@ export class HeaderComponent {
     {
       path: '/login',
       title: 'Login'
+    },
+    {
+      path: '/planner',
+      title: 'Planner'
+    },
+    {
+      path: '/cat-facts',
+      title: 'Cat Facts'
+    },
+    {
+      path: '/users',
+      title: 'Users'
     }
   ];
 }

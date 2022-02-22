@@ -1,6 +1,8 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
-import {CatFactService} from "../../shared/services/car-fact.service";
+import {Component,  OnInit} from '@angular/core';
+
 import {Observable, Subscription} from "rxjs";
+
+import {CatFactService} from "../../shared/services/car-fact.service";
 import {CatFact} from "../../shared/models/cat-fact.model";
 
 @Component({
@@ -8,22 +10,26 @@ import {CatFact} from "../../shared/models/cat-fact.model";
   templateUrl: './cat-facts.component.html',
   styleUrls: ['./cat-facts.component.scss']
 })
-export class CatFactsComponent implements OnInit, OnDestroy {
+export class CatFactsComponent implements OnInit {
+  //export class CatFactsComponent implements OnInit, OnDestroy { (šo rindu izmanto subscription)
   facts$?: Observable<CatFact[]>;
-  facts?: CatFact[] = [];//kura var saglabat
-  factsSubscription$?: Subscription;
+  //facts?: CatFact[] = [];//kura var saglabat
+  // factsSubscription$?: Subscription;
 
   constructor(private catFactService: CatFactService) { }
 
   ngOnInit(): void {
     this.facts$ = this.catFactService.getCatFacts();
-    // this.factsSubscription$ = this.facts$.subscribe(facts => {
-    //   console.log(facts)
-    //   this.facts = facts;
-    // });//kaut ko uzreiz darit ar datiem
+    /*this.factsSubscription$ = this.facts$.subscribe(facts => {
+      console.log(facts)
+      this.facts = facts;
+    });//kaut ko uzreiz darit ar datiem*/
   }
 
-    ngOnDestroy(): void {
+ /*   ngOnDestroy(): void {
       this.factsSubscription$?.unsubscribe();
+  }*/
+  sayHi(message: string): void{
+    console.log(message);
   }
 }

@@ -1,6 +1,9 @@
-<div>
-  <div *ngIf="facts">
-<!--    // ja fakti ir , tad pados, sho nevajag ja componente nonem ? no facts  facts: CatFact[] = [];//kura var saglabat-->
-    {{ facts[0]?.text}}
-  </div>
-</div>
+<section  *ngIf="facts$ | async as facts" class="cat-fact-section ">
+ <app-cat-fact-card
+  *ngFor="let fact of facts; let i = index"
+  class="cat-fact-section "
+  [fact]="fact"
+  (sayHiEvent)="sayHi($event)"
+  [index]="i">
+ </app-cat-fact-card>
+</section>
